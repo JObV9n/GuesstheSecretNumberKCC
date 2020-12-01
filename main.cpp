@@ -38,7 +38,7 @@ int hints();
 }x;
 
 //Random Number Generation
- int game::random_num() 
+ int game::random_num()
 {
 	srand(time(0));
 
@@ -87,7 +87,7 @@ int game::display_Clock()
 */
 
 //Hints Function
-int game:: hints(){ 
+int game:: hints(){
 
     switch(chance) // Switch conditions of hints for the player
     {
@@ -156,6 +156,9 @@ int game:: hints(){
             }
 
     case (5):
+        cout<< "This is your final hint !!!!"<<endl;
+
+        system("pause");
         if (random_number % 3==0){
             cout << "Your Secret Number is divisible by 3" << endl;
             getch();
@@ -175,14 +178,14 @@ int game:: hints(){
 }
 
 // Game Start-Up Function
-int game::startgame() 
+int game::startgame()
 {
     system("cls");
     cout<<"Welcome TO The Game"<<endl;
     cout<<"Here the computer has generated a random number That you have to guess"<<endl;
     //timer();
 
-    x.random_num();//calling function for random number
+//  x.random_num();//calling function for random number
 //  x.hints(); //calling hints for initial hints when the chance = 5;
 
     while (chance<5) // chance logic
@@ -223,11 +226,11 @@ int game::startgame()
     cout << "Sorry You have no chances left."<<endl
                  << "Now Returning to the Game Menu."<<endl;
             getch();
-           return x.startgame();
+           x.startgame();
 }
 
 // About the Game
-int game::about() 
+int game::about()
 {
     system("cls");
     cout<<"This game is about Guessing the secret number in which a computer generates the random number which you"<<endl
@@ -238,10 +241,11 @@ int game::about()
 
 
 // Start Face of The Game Menu
-int game::start() 
+int game::start()
 {
                         int save;
                         system("cls");
+                        system("Color 7c");
                         cout<<"\n"<<"\n"<<endl;
                     cout<<"\t\t\t"<<"Welcome to the game of finding the secret number generated!:"<<endl;
                                             cout<<"\t\t\t\t\t<-----::Menu::----->"<<endl;
@@ -287,9 +291,10 @@ return EXIT_FAILURE;
 
 }
 
-
+//Main Page
 int main()
 {
+        system("Color A1");
         int choice;
         //int chance;
          cout<<"\t\t\t\t\t<-----::Login Page::----->"<<endl;
@@ -329,7 +334,7 @@ int main()
 
 
 // Login Function
-int game::login() 
+int game::login()
 {
         system("cls");
         int count;
@@ -369,7 +374,7 @@ int game::login()
 }
 
 // User Registration Function
-int game::registr() 
+int game::registr()
 {
 
         string reguser,regpass;
@@ -379,7 +384,7 @@ int game::registr()
         cout<<"\nEnter the password :";
         cin>>regpass;
 
-        fstream reg("database.txt",ios::app); // Input User Details
+        fstream reg("database.txt",ios::app); // Input User Details in databae.txt
         reg<<reguser<<' '<<regpass<<endl;
 
         system("cls");
