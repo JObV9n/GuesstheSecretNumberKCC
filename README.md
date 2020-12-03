@@ -7,6 +7,9 @@ This is keyboard based number guessing trivia where you have 7 chances to find t
 -No any special requirement required for this program.
 -Compilation with C++ 98 will not work.
 
+Issue with configuring SFML in Code-Block:
+  -Change the drive location to your SFML directory(Check in the .cbp file).
+  
 Issue in Visual Studio :
-  Use the GCC-5.1.0 or higher.
-  Keep the header file and sln file in the same folder.
+  -Use the GCC-5.1.0 or higher.
+  -Keep the header file and sln file in the same folder.
