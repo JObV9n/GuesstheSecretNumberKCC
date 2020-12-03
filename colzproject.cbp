@@ -43,10 +43,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="D:/SFML-2.5.1/include" />
+			<Add directory="Drive location:/SFML-2.5.1/include" />
 		</Compiler>
 		<Linker>
-			<Add directory="D:/SFML-2.5.1/lib" />
+			<Add directory="Drive loactaion:/SFML-2.5.1/lib" />
 		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
